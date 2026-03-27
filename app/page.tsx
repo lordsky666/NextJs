@@ -12,7 +12,25 @@ const galleryImages = [
   { src: "/Foto/gal3.jpg", alt: "Grumeza Mihail", title: "Grumeza Mihail", label: "Head Referee", className: "" },
   { src: "/Foto/gal7.jpg", alt: "Atmosferă de sală", title: "Oleg Tudorean", label: "Campionul Absolut al Moldovei", className: "tall" },
   { src: "/Foto/gal8.jpg", alt: "Detaliu competiție", title: "Daniel Procopciuc", label: "Brațul de Aur", className: "tall" },
-]
+];
+
+const championshipYears = [
+  {
+    year: "2026",
+    src: "/Foto/gal2.jpg",
+    alt: "Campionatul Moldovei 2026",
+  },
+  {
+    year: "2025",
+    src: "/Foto/nat_9s.jpg",
+    alt: "Campionatul Moldovei 2025",
+  },
+  {
+    year: "2024",
+    src: "/Foto/nat_8.jpg",
+    alt: "Campionatul Moldovei 2024",
+  },
+];
 
 const contactItems = [
   { title: "Telefon", value: "+373 00 000 000" },
@@ -40,7 +58,7 @@ export default function Home() {
               />
             </div>
             <div className="brand__text">
-              <span className="brand__eyebrow">Federația Națională</span>
+              <span className="brand__eyebrow">Federația Națională Sportivă</span>
               <strong>Armwrestling Moldova</strong>
             </div>
           </a>
@@ -59,6 +77,7 @@ export default function Home() {
 
           <nav className={`site-nav ${menuOpen ? "site-nav--open" : ""}`}>
             <a href="#hero">Acasă</a>
+            <a href="#campioane">Campioane</a>
             <a href="#galerie">Galerie</a>
             <a href="#contact">Contact</a>
             <a href="#footer">Info</a>
@@ -111,12 +130,44 @@ export default function Home() {
           </div>
         </section>
 
+
+
+
+        <section className="champions-section" id="campioane">
+          <div className="champions-panel">
+            <div className="champions-panel__intro">
+              <span className="champions-panel__kicker">Campionatele Moldovei</span>
+              <h2>Secțiuni cu anii 2026-2024</h2>
+            </div>
+
+            <div className="championship-years-grid">
+              {championshipYears.map((item) => (
+                <article className="championship-year-card" key={item.year}>
+                  <div className="championship-year-card__image-wrap">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      className="championship-year-card__image"
+                      sizes="(max-width: 820px) 100vw, 33vw"
+                    />
+                  </div>
+                  <h3>{item.year}</h3>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
+        
+
         <section className="gallery-section" id="galerie">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Galerie Vizuală</span>
-            <h2>Cele mai bune momente </h2>
+            <h2>Cele mai bune momente</h2>
             <p>
-              O colecție de imagini care surprind esența competiției, puterea și pasiunea sportivilor noștri. 
+              O colecție de imagini care surprind esența competiției, puterea și pasiunea sportivilor noștri.
             </p>
           </div>
 
@@ -146,9 +197,7 @@ export default function Home() {
           <div className="section-heading">
             <span className="section-heading__eyebrow">Contact Oficial</span>
             <h2>Date oficiale de contact</h2>
-            <p>
-                            Pentru orice informații sau colaborări, ne puteți contacta folosind datele de mai jos.
-            </p>
+            <p>Pentru orice informații sau colaborări, ne puteți contacta folosind datele de mai jos.</p>
           </div>
 
           <div className="contact-grid">
@@ -172,7 +221,6 @@ export default function Home() {
               A.R.
             </p>
           </div>
-          
         </div>
       </footer>
     </div>
