@@ -1,25 +1,52 @@
-html, body{
+html, body {
   margin: 0;
   padding: 0;
 }
 
 .Top {
-  background:linear-gradient(90deg, #2573e8d3, #f0f638a8,#b10e0ec9);
-  width: 100vw;   
-  padding: 5px;
-  margin: 0;
-  text-align: center;
+  display: flex;
+  align-items: center;          /* Aliniază vertical logo + meniu */
+  justify-content: flex-start;  /* Totul începe de la stânga */
+  gap: 400px;                    /* Distanța dintre logo și meniu */
+  padding: 5px 20px;
+  background: linear-gradient(90deg, #2573e8d3, #f0f638a8, #b10e0ec9);
+  flex-wrap: wrap;
 }
 
-.Top img{
-  display: block;
-  margin-left: 40;
-  margin-right:auto ;
-
-  margin-bottom: 5px;
+.Top img {
+  display: block;      
+  margin-left: 10;     
 }
 
-.Describe{
-  color: rgb(25, 161, 115);
+.Top-menu {
+  display: flex;
+  gap: 15px;                     
 }
 
+.Top-menu a {
+  font-family: 'Reboto', Courier, monospace;
+  color: black;
+  text-decoration: none;
+  font-size: 19px;
+  padding: 0 10px;               
+  line-height: 50px;   
+}
+
+.Main_Content {
+  
+}
+
+@media (max-width: 600px) {
+  .Top {
+    gap: 20px;
+    justify-content: center;
+  }
+  .Top img {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .Top-menu {
+    justify-content: center;
+    width: 100%;
+  }
+}
