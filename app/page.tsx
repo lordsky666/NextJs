@@ -2,12 +2,38 @@
 
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const montserrat = Montserrat({ subsets: ["latin"], weight: "500" });
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const carouselImages = [
+    { src: "/Foto/gal1.jpg", alt: "Imagine carusel 1" },
+    { src: "/Foto/gal6.jpg", alt: "Imagine carusel 2" },
+    { src: "/Foto/gal3.jpg", alt: "Imagine carusel 3" },
+    { src: "/Foto/gal7.jpg", alt: "Imagine carusel 4" },
+    { src: "/Foto/gal5.jpg", alt: "Imagine carusel 5" },
+  ];
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % carouselImages.length);
+    }, 3500);
+
+    return () => window.clearInterval(interval);
+  }, [carouselImages.length]);
+
+  const goToPreviousSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? carouselImages.length - 1 : prevSlide - 1
+    );
+  };
+
+  const goToNextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % carouselImages.length);
+  };
 
   return (
     <div className={`${montserrat.className} Page`}>
@@ -130,6 +156,61 @@ export default function Home() {
           />
         </div>
       </div>
+
+      <section className="CarouselSection">
+        <div className="CarouselHeader">
+          <h2>Galerie Foto</h2>
+        </div>
+
+        <div className="CarouselViewport">
+          <button
+            className="CarouselButton CarouselButtonLeft"
+            type="button"
+            onClick={goToPreviousSlide}
+            aria-label="Poza anterioara"
+          >
+            ‹
+          </button>
+
+          <div
+            className="CarouselTrack"
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            {carouselImages.map((image, index) => (
+              <div className="CarouselCard" key={`${image.src}-${index}`}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={900}
+                  height={600}
+                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 90vw, 1100px"
+                />
+              </div>
+            ))}
+          </div>
+
+          <button
+            className="CarouselButton CarouselButtonRight"
+            type="button"
+            onClick={goToNextSlide}
+            aria-label="Poza urmatoare"
+          >
+            ›
+          </button>
+        </div>
+
+        <div className="CarouselDots">
+          {carouselImages.map((image, index) => (
+            <button
+              key={`${image.src}-${index}`}
+              type="button"
+              className={`CarouselDot ${currentSlide === index ? "is-active" : ""}`}
+              onClick={() => setCurrentSlide(index)}
+              aria-label={`Mergi la poza ${index + 1}`}
+            />
+          ))}
+        </div>
+      </section>
 
       <div className="Contacte">
         <a href="#nr">Numar de telefon</a>

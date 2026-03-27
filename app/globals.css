@@ -61,6 +61,98 @@ body {
   height: auto;
 }
 
+.CarouselSection {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto 32px;
+}
+
+.CarouselHeader {
+  margin-bottom: 16px;
+}
+
+.CarouselHeader h2 {
+  margin: 0 0 6px;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.CarouselHeader p {
+  margin: 0;
+  color: #4a5565;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+}
+
+.CarouselViewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12);
+}
+
+.CarouselTrack {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.CarouselCard {
+  min-width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.CarouselCard img {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 52vw, 620px);
+  object-fit: cover;
+  object-position: top;
+}
+
+.CarouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.48);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.CarouselButtonLeft {
+  left: 16px;
+}
+
+.CarouselButtonRight {
+  right: 16px;
+}
+
+.CarouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.CarouselDot {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.22);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.CarouselDot.is-active {
+  background: #111;
+  transform: scale(1.15);
+}
+
 .Contacte {
   background-color: #010409ed;
   width: min(1200px, calc(100% - 32px));
@@ -97,6 +189,55 @@ body {
     width: min(100%, calc(100% - 20px));
   }
 
+  .CarouselSection {
+    width: min(100%, calc(100% - 20px));
+    margin-bottom: 20px;
+  }
+
+  .CarouselHeader {
+    margin-bottom: 12px;
+  }
+
+  .CarouselHeader h2 {
+    font-size: 1.2rem;
+  }
+
+  .CarouselHeader p {
+    font-size: 0.85rem;
+  }
+
+  .CarouselViewport {
+    border-radius: 16px;
+  }
+
+  .CarouselCard img {
+    height: 240px;
+  }
+
+  .CarouselButton {
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+  }
+
+  .CarouselButtonLeft {
+    left: 10px;
+  }
+
+  .CarouselButtonRight {
+    right: 10px;
+  }
+
+  .CarouselDots {
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .CarouselDot {
+    width: 10px;
+    height: 10px;
+  }
+
   .HeroImage {
     border-radius: 18px;
   }
@@ -113,6 +254,15 @@ body {
   .Contacte {
     width: min(100%, calc(100% - 20px));
     grid-template-columns: 1fr;
-    padding: 16px;
+    padding: 10px;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .Contacte a {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    border-radius: 12px;
   }
 }
