@@ -1,52 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
+body {
+  background: #f5f7fb;
+  color: #111;
+}
+
+.Page {
+  min-height: 100vh;
+}
+
 .Top {
-  display: flex;
-  align-items: center;          /* Aliniază vertical logo + meniu */
-  justify-content: flex-start;  /* Totul începe de la stânga */
-  gap: 400px;                    /* Distanța dintre logo și meniu */
-  padding: 5px 20px;
   background: linear-gradient(90deg, #2573e8d3, #f0f638a8, #b10e0ec9);
-  flex-wrap: wrap;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .Top img {
-  display: block;      
-  margin-left: 10;     
+  display: block;
 }
 
 .Top-menu {
-  display: flex;
-  gap: 15px;                     
+  max-width: 100%;
 }
 
 .Top-menu a {
-  font-family: 'Reboto', Courier, monospace;
+  font-family: 'Roboto Mono', Courier, monospace;
   color: black;
   text-decoration: none;
-  font-size: 19px;
-  padding: 0 10px;               
-  line-height: 50px;   
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  padding: 8px 10px;
+  line-height: 1.2;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.Top-menu a:hover {
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .Main_Content {
-  
+  width: min(1200px, calc(100% - 32px));
+  margin: clamp(20px, 4vw, 40px) auto;
 }
 
-@media (max-width: 600px) {
-  .Top {
-    gap: 20px;
-    justify-content: center;
+.HeroImage {
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16);
+}
+
+.HeroImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.Contacte {
+  background-color: #010409ed;
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto 32px;
+  padding: 20px;
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.Contacte a {
+  min-height: 72px;
+  padding: 18px 16px;
+  color: rgb(145, 144, 144);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .Contacte {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .Top img {
-    margin-left: 0;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .Main_Content {
+    width: min(100%, calc(100% - 20px));
   }
+
+  .HeroImage {
+    border-radius: 18px;
+  }
+
   .Top-menu {
-    justify-content: center;
+    text-align: center;
+  }
+
+  .Top-menu a {
     width: 100%;
+    max-width: 320px;
+  }
+
+  .Contacte {
+    width: min(100%, calc(100% - 20px));
+    grid-template-columns: 1fr;
+    padding: 16px;
   }
 }
