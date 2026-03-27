@@ -77,7 +77,7 @@ export default function Home() {
 
           <nav className={`site-nav ${menuOpen ? "site-nav--open" : ""}`}>
             <a href="#hero">Acasă</a>
-            <a href="#campioane">Campioane</a>
+            <a href="#campioane">Campionate</a>
             <a href="#galerie">Galerie</a>
             <a href="#contact">Contact</a>
             <a href="#footer">Info</a>
@@ -133,7 +133,7 @@ export default function Home() {
 
 
 
-        <section className="champions-section" id="campioane">
+        <section className="champions-section" id="campioanate">
           <div className="champions-panel">
             <div className="champions-panel__intro">
               <span className="champions-panel__kicker">Campionatele Moldovei</span>
