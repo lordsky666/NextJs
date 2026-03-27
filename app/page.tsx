@@ -11,13 +11,13 @@ export default function Home() {
         height={100}
         />
 
-        <div className="Top-menu">
+        {/* <div className="Top-menu">
           <a href="#home">Pagina principala</a>
           <a href="#home">Campioante</a>
           <a href="#home"></a>
-        </div>
+        </div> */}
       </div>
-    
+
       {/* <div>
         <button>"Im button"</button>
       </div> */}
