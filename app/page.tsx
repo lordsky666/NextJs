@@ -7,12 +7,12 @@ import { useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 const galleryImages = [
-  { src: "/Foto/gal1.jpg", alt: "Campionat national", title: "Campionat National", label: "Elite Match Day", className: "tall" },
-  { src: "/Foto/gal6.jpg", alt: "Atleti in competitie", title: "Atleti in competitie", label: "Power & Focus", className: "wide" },
-  { src: "/Foto/gal3.jpg", alt: "Moment de premiere", title: "Moment de premiere", label: "Victory Frame", className: "" },
-  { src: "/Foto/gal7.jpg", alt: "Atmosfera de sala", title: "Atmosfera de sala", label: "Arena Energy", className: "tall" },
-  { src: "/Foto/gal5.jpg", alt: "Detaliu competitie", title: "Detaliu competitie", label: "Precision & Strength", className: "wide" },
-];
+  { src: "/Foto/gal1.jpg", alt: "Cupa Moldovei", title: "Cupa Moldovei", label: "Cel mai prestigios campionat", className: "tall" },
+  { src: "/Foto/gal6.jpg", alt: "Alexandru Grumeza", title: "Grumeza Alexandru", label: "Presedintele Federatiei ", className: "wide" },
+  { src: "/Foto/gal3.jpg", alt: "Grumeza Mihail", title: "Grumeza Mihail", label: "Had Referee", className: "" },
+  { src: "/Foto/gal7.jpg", alt: "Atmosfera de sala", title: "Oleg Tudorean", label: "Campionul Absolut a Moldovei", className: "tall" },
+  { src: "/Foto/gal8.jpg", alt: "Detaliu competitie", title: "Daniel Procopciuc", label: "Bratul de Aur", className: "tall" },
+]
 
 const contactItems = [
   { title: "Telefon", value: "+373 00 000 000" },
@@ -96,16 +96,16 @@ export default function Home() {
 
             <div className="hero__stats">
               <div>
-                <strong>120+</strong>
-                <span>Competitii si evenimente</span>
+                <strong>Tradiții solide</strong>
+                <span>10 ani de excelență</span>
               </div>
               <div>
-                <strong>24/7</strong>
-                <span>Imagine premium in orice format</span>
+                <strong>Generații noi</strong>
+                <span>Viitorul puternic</span>
               </div>
               <div>
-                <strong>Top Tier</strong>
-                <span>Design clean, luxos si memorabil</span>
+                <strong>Campioni</strong>
+                <span>Perseverență</span>
               </div>
             </div>
           </div>
@@ -114,10 +114,9 @@ export default function Home() {
         <section className="gallery-section" id="galerie">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Galerie Vizuala</span>
-            <h2>Un grid editorial mare, cinematic si perfect echilibrat.</h2>
+            <h2>Cele mai bune momente </h2>
             <p>
-              Imagini prezentate intr-un layout tip masonry, cu hover fluid, overlay elegant
-              si accent premium pentru o experienta vizuala de portofoliu.
+              O colectie de imagini care surprind esenta competitiei, puterea si pasiunea sportivilor nostri. 
             </p>
           </div>
 
@@ -146,10 +145,9 @@ export default function Home() {
         <section className="contact-section" id="contact">
           <div className="section-heading">
             <span className="section-heading__eyebrow">Contact Oficial</span>
-            <h2>O bara de contact premium, clara si usor de parcurs.</h2>
+            <h2>Date oficiale de contact</h2>
             <p>
-              Datele importante sunt grupate in carduri curate, cu contrast puternic si
-              accente cyan-violet pentru un look high-end coerent cu restul paginii.
+                            Pentru orice informații sau colaborări, ne puteți contacta folosind datele de mai jos.
             </p>
           </div>
 
@@ -168,12 +166,11 @@ export default function Home() {
         <div className="site-footer__inner">
           <div>
             <span className="site-footer__eyebrow">Federatia Nationala de Armwrestling</span>
-            <p>Design premium cu directie vizuala moderna, memorabila si pregatita pentru orice ecran.</p>
+            <p>
+              Susținem performanța și promovăm cei mai puternici sportivi ai Republicii Moldova. Viitorul armwrestlingului este construit de noi.
+            </p>
           </div>
-          <div className="site-footer__meta">
-            <span>Republica Moldova</span>
-            <span>High-fidelity homepage redesign</span>
-          </div>
+          
         </div>
       </footer>
     </div>
