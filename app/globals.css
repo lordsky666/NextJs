@@ -1,8 +1,25 @@
-.H1{
-  background-color: antiquewhite;
-  padding: 20px;
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+.Top {
+  background:linear-gradient(90deg, #2573e8d3, #f0f638a8,#b10e0ec9);
+  width: 100vw;   
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+}
+
+.Top img{
+  display: block;
+  margin-left: 40;
+  margin-right:auto ;
+
+  margin-bottom: 5px;
 }
 
 .Describe{
   color: rgb(25, 161, 115);
 }
+
