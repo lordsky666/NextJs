@@ -77,7 +77,7 @@ export default function Home() {
 
           <nav className={`site-nav ${menuOpen ? "site-nav--open" : ""}`}>
             <a href="#hero">Acasă</a>
-            <a href="#campioane">Campionate</a>
+            <a href="#campioanate">Campioanate</a>
             <a href="#galerie">Galerie</a>
             <a href="#contact">Contact</a>
             <a href="#footer">Info</a>
