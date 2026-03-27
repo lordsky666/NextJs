@@ -8,16 +8,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 const galleryImages = [
   { src: "/Foto/gal1.jpg", alt: "Cupa Moldovei", title: "Cupa Moldovei", label: "Cel mai prestigios campionat", className: "tall" },
-  { src: "/Foto/gal6.jpg", alt: "Alexandru Grumeza", title: "Grumeza Alexandru", label: "Presedintele Federatiei ", className: "wide" },
-  { src: "/Foto/gal3.jpg", alt: "Grumeza Mihail", title: "Grumeza Mihail", label: "Had Referee", className: "" },
-  { src: "/Foto/gal7.jpg", alt: "Atmosfera de sala", title: "Oleg Tudorean", label: "Campionul Absolut a Moldovei", className: "tall" },
-  { src: "/Foto/gal8.jpg", alt: "Detaliu competitie", title: "Daniel Procopciuc", label: "Bratul de Aur", className: "tall" },
+  { src: "/Foto/gal6.jpg", alt: "Alexandru Grumeza", title: "Grumeza Alexandru", label: "Președintele Federației", className: "wide" },
+  { src: "/Foto/gal3.jpg", alt: "Grumeza Mihail", title: "Grumeza Mihail", label: "Head Referee", className: "" },
+  { src: "/Foto/gal7.jpg", alt: "Atmosferă de sală", title: "Oleg Tudorean", label: "Campionul Absolut al Moldovei", className: "tall" },
+  { src: "/Foto/gal8.jpg", alt: "Detaliu competiție", title: "Daniel Procopciuc", label: "Brațul de Aur", className: "tall" },
 ]
 
 const contactItems = [
   { title: "Telefon", value: "+373 00 000 000" },
   { title: "Email", value: "federatie@example.md" },
-  { title: "Adresa", value: "Chisinau, Republica Moldova" },
+  { title: "Adresă", value: "Chișinău, Republica Moldova" },
   { title: "Social", value: "@federatia.oficiala" },
 ];
 
@@ -28,11 +28,11 @@ export default function Home() {
     <div className={`${inter.className} page-shell`}>
       <header className="site-header">
         <div className="site-header__inner">
-          <a className="brand" href="#top" aria-label="Acasa">
+          <a className="brand" href="#top" aria-label="Acasă">
             <div className="brand__logo-wrap">
               <Image
                 src="/Foto/image_1.png"
-                alt="Logo Federatia"
+                alt="Logo Federația"
                 width={88}
                 height={88}
                 className="brand__logo"
@@ -40,7 +40,7 @@ export default function Home() {
               />
             </div>
             <div className="brand__text">
-              <span className="brand__eyebrow">Federatia Nationala</span>
+              <span className="brand__eyebrow">Federația Națională</span>
               <strong>Armwrestling Moldova</strong>
             </div>
           </a>
@@ -58,7 +58,7 @@ export default function Home() {
           </button>
 
           <nav className={`site-nav ${menuOpen ? "site-nav--open" : ""}`}>
-            <a href="#hero">Acasa</a>
+            <a href="#hero">Acasă</a>
             <a href="#galerie">Galerie</a>
             <a href="#contact">Contact</a>
             <a href="#footer">Info</a>
@@ -70,7 +70,7 @@ export default function Home() {
         <section className="hero" id="hero">
           <Image
             src="/Foto/md_open.jpg"
-            alt="Imagine principala cu atleti"
+            alt="Imagine principală cu atleți"
             fill
             priority
             className="hero__image"
@@ -82,12 +82,12 @@ export default function Home() {
             <div className="hero__badge">Moldova Open Cup 2</div>
             <h1>Putere pură. Dominanță absolută. Doar cei mai buni între cei mai buni.</h1>
             <p>
-              Pagina oficiala a Federatiei Nationale de Armwrestling din Republica Moldova. Aici gasesti competitii, rezultate si informatii despre cei mai buni sportivi ai tarii.
+              Pagina oficială a Federației Naționale de Armwrestling din Republica Moldova. Aici găsești competiții, rezultate și informații despre cei mai buni sportivi ai țării.
             </p>
 
             <div className="hero__actions">
               <a className="hero__cta hero__cta--primary" href="#galerie">
-                Exploreaza galeria
+                Explorează galeria
               </a>
               <a className="hero__cta hero__cta--ghost" href="#contact">
                 Contact oficial
@@ -113,10 +113,10 @@ export default function Home() {
 
         <section className="gallery-section" id="galerie">
           <div className="section-heading">
-            <span className="section-heading__eyebrow">Galerie Vizuala</span>
+            <span className="section-heading__eyebrow">Galerie Vizuală</span>
             <h2>Cele mai bune momente </h2>
             <p>
-              O colectie de imagini care surprind esenta competitiei, puterea si pasiunea sportivilor nostri. 
+              O colecție de imagini care surprind esența competiției, puterea și pasiunea sportivilor noștri. 
             </p>
           </div>
 
@@ -165,9 +165,11 @@ export default function Home() {
       <footer className="site-footer" id="footer">
         <div className="site-footer__inner">
           <div>
-            <span className="site-footer__eyebrow">Federatia Nationala de Armwrestling</span>
+            <span className="site-footer__eyebrow">Federația Națională de Armwrestling</span>
             <p>
               Susținem performanța și promovăm cei mai puternici sportivi ai Republicii Moldova. Viitorul armwrestlingului este construit de noi.
+              All rights reserved &copy; 2026
+              A.R.
             </p>
           </div>
           
