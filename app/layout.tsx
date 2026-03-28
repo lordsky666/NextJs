@@ -1,5 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import SiteHeader from "./components/site-header";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ro" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className={`${inter.className} min-h-full flex flex-col`}>
+        <SiteHeader />
+        {children}
+      </body>
     </html>
   );
 }

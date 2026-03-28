@@ -1,11 +1,7 @@
 'use client';
 
-import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const galleryImages = [
   { src: "/Foto/gal1.jpg", alt: "Cupa Moldovei", title: "Cupa Moldovei", label: "Cel mai prestigios campionat", className: "tall" },
@@ -44,51 +40,8 @@ const contactItems = [
 ];
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
-    <div className={`${inter.className} page-shell`}>
-      <header className="site-header">
-        <div className="site-header__inner">
-          <a className="brand" href="#top" aria-label="Acasă">
-            <div className="brand__logo-wrap">
-              <Image
-                src="/Foto/image_1.png"
-                alt="Logo Federația"
-                width={88}
-                height={88}
-                className="brand__logo"
-                priority
-              />
-            </div>
-            <div className="brand__text">
-              <span className="brand__eyebrow">Federația Națională Sportivă</span>
-              <strong>Armwrestling Moldova</strong>
-            </div>
-          </a>
-
-          <button
-            className="nav-toggle"
-            type="button"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Deschide meniul"
-            aria-expanded={menuOpen}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
-
-          <nav className={`site-nav ${menuOpen ? "site-nav--open" : ""}`}>
-            <a href="#hero">Acasă</a>
-            <a href="#campioanate">Campioanate</a>
-            <a href="#galerie">Galerie</a>
-            <a href="#contact">Contact</a>
-            <a href="#footer">Info</a>
-          </nav>
-        </div>
-      </header>
-
+    <div className="page-shell">
       <main>
         <section className="hero" id="hero">
           <Image
