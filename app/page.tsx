@@ -2,6 +2,7 @@
 
 import { Inter } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,16 +18,19 @@ const galleryImages = [
 const championshipYears = [
   {
     year: "2026",
+    href: "/campionate/2026",
     src: "/Foto/gal2.jpg",
     alt: "Campionatul Moldovei 2026",
   },
   {
     year: "2025",
+    href: "/campionate/2025",
     src: "/Foto/nat_9s.jpg",
     alt: "Campionatul Moldovei 2025",
   },
   {
     year: "2024",
+    href: "/campionate/2024",
     src: "/Foto/nat_8.jpg",
     alt: "Campionatul Moldovei 2024",
   },
@@ -142,7 +146,7 @@ export default function Home() {
 
             <div className="championship-years-grid">
               {championshipYears.map((item) => (
-                <article className="championship-year-card" key={item.year}>
+                <Link className="championship-year-card" href={item.href} key={item.year}>
                   <div className="championship-year-card__image-wrap">
                     <Image
                       src={item.src}
@@ -153,7 +157,7 @@ export default function Home() {
                     />
                   </div>
                   <h3>{item.year}</h3>
-                </article>
+                </Link>
               ))}
             </div>
           </div>
