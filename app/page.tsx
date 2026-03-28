@@ -17,18 +17,21 @@ const championshipYears = [
     href: "/campionate/2026",
     src: "/Foto/gal2.jpg",
     alt: "Campionatul Moldovei 2026",
+    imageClassName: "championship-year-card__image--full",
   },
   {
     year: "2025",
     href: "/campionate/2025",
     src: "/Foto/nat_9s.jpg",
     alt: "Campionatul Moldovei 2025",
+    imageClassName: "",
   },
   {
     year: "2024",
     href: "/campionate/2024",
     src: "/Foto/nat_8.jpg",
     alt: "Campionatul Moldovei 2024",
+    imageClassName: "",
   },
 ];
 
@@ -105,7 +108,7 @@ export default function Home() {
                       src={item.src}
                       alt={item.alt}
                       fill
-                      className="championship-year-card__image"
+                      className={`championship-year-card__image ${item.imageClassName}`.trim()}
                       sizes="(max-width: 820px) 100vw, 33vw"
                     />
                   </div>
